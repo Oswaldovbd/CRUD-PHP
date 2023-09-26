@@ -1,6 +1,7 @@
 <?php
 include "conexao.php";
 include "header.php";
+include "verifica_sessao.php";
 ?>
 <!DOCTYPE html>
 
@@ -42,7 +43,7 @@ include "header.php";
                 ?>
             </tbody>
         </table>
-        <a href="index.php" class="w-20 text-center py-3 rounded bg-blue-500 text-white mt-8">Voltar</a>
+        <a href="home.php" class="w-20 text-center py-3 rounded bg-blue-500 text-white mt-8">Voltar</a>
     </div>
 </body>
 

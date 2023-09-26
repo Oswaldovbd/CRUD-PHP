@@ -1,6 +1,7 @@
 <?php
 include "conexao.php";
 include "header.php";
+include "verifica_sessao.php";
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
     $nome = $_POST['nome'];
@@ -14,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
     $stmt->bindParam(':senha', $senha, PDO::PARAM_STR);
     try {
         $stmt->execute();
-        header('location: index.php');
+        header('location: home.php');
         exit;
     } catch (PDOException $e) {
         echo "Erro ao inserir: " . $e->getMessage();
@@ -44,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
                         class="w-full text-center py-3 rounded bg-blue-500 text-white">Criar
                         Usuário</button>
                 </div>
-                <a href="index.php" class="w-20 text-center py-3 rounded bg-blue-500 text-white mt-8">Voltar</a>
+                <a href="home.php" class="w-20 text-center py-3 rounded bg-blue-500 text-white mt-8">Voltar</a>
             </div>
         </div>
     </form>
