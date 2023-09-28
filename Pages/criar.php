@@ -1,7 +1,7 @@
 <?php
-include "conexao.php";
-include "header.php";
-include "verifica_sessao.php";
+include "../DB/conexao.php";
+include "../Components/header.php";
+include "../Components/verifica_sessao.php";
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
     $nome = $_POST['nome'];

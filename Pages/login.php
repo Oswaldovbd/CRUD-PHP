@@ -1,6 +1,6 @@
 <?php
-include "conexao.php";
-include "header.php";
+include "../DB/conexao.php";
+include "../Components/header.php";
 
 session_start();
 if (isset($_SESSION['user'])) {

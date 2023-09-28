@@ -1,7 +1,7 @@
 <?php
-include "conexao.php";
-include "header.php";
-include "verifica_sessao.php";
+include "../DB/conexao.php";
+include "../Components/header.php";
+include "../Components/verifica_sessao.php";
 ?>
 <!DOCTYPE html>
 
@@ -36,6 +36,17 @@ include "verifica_sessao.php";
                         </td>
                         <td class="border px-8 py-4">
                             <?php echo $data['email']; ?>
+                        </td>
+                        <td class="border px-8 py-4">
+                            <form action="deletar.php" method="post">
+                                <input type="hidden" name="id" value="<?php echo $data['id']; ?>">
+                                <button type="submit" class="bg-red-500 text-white p-2 rounded" name="deletar">Deletar
+                                </button>
+                            </form>
+                        </td>
+
+                        <td class="border px-8 py-4">
+                            <a href="atualizar.php" class="bg-blue-500 text-white p-2 rounded">Atualizar</a>
                         </td>
                     </tr>
                     <?php
